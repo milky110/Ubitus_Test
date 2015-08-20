@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    p    {color:grey}
+</style>
+</head>
+<body onload="getContent();">
+
+<h2 id="name"></h2>
+<p id="description"></p>
+
+<script>
+function getContent() {
+    var param = window.location.search.substring(1);
+    var param_name = (param.split("&").length > 0)?param.split("&")[0]:"";
+    var param_description = (param.split("&").length > 1)?param.split("&")[1]:"";
+
+    document.getElementById("name").innerHTML = "name: "+(param_name.split("=").length > 1)?param_name.split("=")[1]:"";
+    document.getElementById("description").innerHTML = "description: "+(param_description.split("=").length > 1)?param_description.split("=")[1]:"";
+}
+</script>
+
+</body>
+</html>
