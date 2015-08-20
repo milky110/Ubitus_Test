@@ -13,3 +13,4 @@ public class AjaxCheck extends HttpServlet {
         response.getWriter().write("pong"); 
 	}
 }
+
